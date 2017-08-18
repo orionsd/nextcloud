@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="menu">
+        <a class="scheme" href="#"></a>
+        <a class="email" href="#"></a>
+    </div>
+    <div class="main">
+        <table class="main-table">
+            <tr class="row">
+                <th class="th title">retroauto</th>
+                <th class="th"></th>
+            </tr>
+            <tr class="row product">
+                <td class="td">
+                    <div class="img-container">
+                        <img src="img/maibah.png" alt=""/>
+                    </div>
+                    <div class="countries">
+                        <span><strong>Россия</strong></span>
+                        <span>Франция</span>
+                        <span>Германия</span>
+                    </div>
+                </td>
+                <td class="td specifications">
+                    <div class="specifications-block">
+                        <span class="car-name">Майбах тип «DS 8»</span>
+                        <span class="info">Емкость цилиндров 7977 см куб</span>
+                        <button class="buy">Купить</button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="row product">
+                <td class="td">
+                    <div class="img-container">
+                        <img src="img/guk.png" alt=""/>
+                    </div>
+                    <div class="countries">
+                        <span>Германия</span>
+                        <span>США</span>
+                    </div>
+                </td>
+                <td class="td specifications">
+                    <div class="specifications-block">
+                        <span class="car-name">Фольксваген «Жук» 1951 г.</span>
+                        <span class="info">Мощность двигателя 25 л.с. при 2000 об/мин.</span>
+                        <button class="buy">Купить</button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="row product">
+                <td class="td">
+                    <div class="img-container">
+                        <img src="img/vw1300.png" alt=""/>
+                    </div>
+                    <div class="countries">
+                        <span>Германия</span>
+                        <span>США</span>
+                    </div>
+                </td>
+                <td class="td specifications">
+                    <div class="specifications-block">
+                        <span class="car-name">Фольксваген «VW 1300»</span>
+                        <span class="info">Мощность двигателя 34 л.с.</span>
+                        <button class="buy">Купить</button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="row product">
+                <td class="td">
+                    <div class="img-container">
+                        <img src="img/horch.png" alt=""/>
+                    </div>
+                    <div class="countries">
+                    </div>
+                </td>
+                <td class="td specifications">
+                    <div class="specifications-block">
+                        <span class="car-name">Horch модель «951 А»</span>
+                        <span class="info">Мощность двигателя 120 л.с. при 3400 об/мин.</span>
+                        <button class="non_available">Нет в продаже
+                            <span class="hint">
+                                В продаже </br>
+                                c 1.09.2017 г.
+                            </span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="row product">
+                <td class="td">
+                    <div class="img-container">
+                        <img src="img/citroen.png" alt=""/>
+                    </div>
+                    <div class="countries">
+                        <span>США</span>
+                    </div>
+                </td>
+                <td class="td specifications">
+                    <div class="specifications-block">
+                        <span class="car-name">«Ситроен тип А»</span>
+                        <span class="info">Мощность двигателя 36 л.с.</span>
+                        <button class="buy">Купить</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <aside class="aside"><p></p>
+    </aside>
+</div>
+
+<div id="ouibounce-modal" class="modal-window">
+    <div class="underlay"></div>
+
+    <div class="popup">
+        <a class="popup__cross" href="#"></a>
+
+        <div class="popup-body">
+            <form action="" method="post" class="form">
+            <h5 class="product-item__title">Фольксваген «VW 1300»</h5>
+            <table class="form-table">
+                <tr>
+                    <td>
+                        <span class="price-title">Цена:</span>
+                    </td>
+                    <td>
+                        <span class="price-total">500 млн. руб.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul class="form-countries">Ваша страна:
+                            <li class="form-rus country-active">
+                                <a href="#">Россия
+                                    <span class="hint hint-countr">12 шт</span>
+                                </a>
+                            </li>
+                            <li class="form-fr">
+                                <a href="#">Франция
+                                    <span class="hint hint-countr">12 шт</span>
+                                </a>
+                            </li>
+                            <li class="form-ger">
+                                <a href="#">Германия
+                                    <span class="hint hint-countr">12 шт</span>
+                                </a>
+                            </li>
+                            <li class="form-ch">
+                                <a href="#">Китай
+                                    <span class="hint hint-countr">12 шт</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <label for="input-name">Имя:</label>
+                        <input id="input-name" class="name" name="name" type="text" placeholder="Имя">
+                        <label for="input-phone">Телефон:</label>
+                        <input id="input-phone" class="number" name="phone" type="text" placeholder="+7">
+                        <label for="input-email">E-mail:</label>
+                        <input id="input-email" class="number" name="email" type="text" placeholder="mail@gmail.com">
+                        <input class="b-submit js_submit btn" type="submit" value="Отправить">
+                    </td>
+                </tr>
+            </table>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
