@@ -9,8 +9,8 @@ $(document).ready(function () {
         {name: "«Ситроен тип А»", descr: "«Ситроен тип А» Созданный в 50-е годы, это был один из крупнейших немецких автомобилей. По своим ходовым качествам и удобству этот шикарный лимузин не уступал автомобилям «Роллс-Ройса»."}
     ];
 
-    //Проверка на принадлежность машин заданной стране
-   /* var name_countries = [
+    //Проверка на принадлежность машин заданной стране - 12шт
+    var name_countries = [
         {name:"Россия"},
         {name:"Франция"},
         {name:"Германия"},
@@ -21,13 +21,44 @@ $(document).ready(function () {
     for (var m = 0; m < $(".countries span").length; m++) {
         k[m] = $(".countries span").eq(m).text();
     }
-    console.log(k);*/
+
+    function matchWords() {
+        var rusCounter = 0,
+            frCounter = 0,
+            gerCounter = 0,
+            usCounter = 0;
+        for (var l = 0; l < k.length; l++) {
+            if (name_countries[0].name == k[l]) {
+                rusCounter++;
+            }
+            else if (name_countries[1].name == k[l]) {
+                frCounter++;
+            }
+            else if (name_countries[2].name == k[l]) {
+                gerCounter++;
+            }
+            else if (name_countries[3].name == k[l]) {
+                usCounter++;
+            }
+        }
+        if (gerCounter == 12) {
+            $(".hint-ger").show();
+        } else if (frCounter == 12) {
+            $(".hint-fr").show();
+        } else if (usCounter == 12) {
+            $(".hint-us").show();
+        } else if (rusCounter == 12) {
+            $(".hint-rus").show();
+        }
+    }
+    matchWords();
+
 
     //Модальное окно
     $(".buy").click(function () {
         $("#ouibounce-modal").fadeIn(200);
     });
-    $(".popup__cross").click(function () {
+    $(".popup-cross").click(function () {
         $('#ouibounce-modal').fadeOut(200);
     });
 
@@ -58,17 +89,12 @@ $(document).ready(function () {
     function scrollCheck() {
         var o = document.querySelector('.main');
         if (o.clientHeight < o.scrollHeight) {
+            $(".popup").width(498);
         } else {
             $(".specifications").width(322);
+            $(".popup").width(481);
         }
     }
     scrollCheck();
+
 });
-
-
-
-
-
-
-
-
